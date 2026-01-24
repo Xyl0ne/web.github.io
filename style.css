@@ -1,108 +1,112 @@
-body{
-    height: 98vh;
-    width: 98vw;
-    background-color: black;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+*{
+    margin: 0;
+    color: #E0E0E0;
+    font-family: 'Courier New', Courier, monospace;
 }
-main{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    margin-top: 30px;
-    
+body{
+    background-color: #121212;
 }
 header, footer{
-    border-radius: 20px;
-    color: white;
-    filter: blur(0.1px);
-     box-shadow: 0px 0px 10px 1px rgba(255, 255, 255);
-     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: navy;
 }
-footer { 
+main{
     
-    color: white;
-    text-align: center;
-    padding: 1rem; }
-img{
-    height: 150px;
-    border-radius: 50%;
-}
-.members1, .members2, .members3{
-
     display: flex;
     flex-direction: column;
+    gap: 120px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+article{
     
-    align-items: center;
-    padding-top: 30px;
-    width: 350px;
-    height: 400px;
-
-    background-color: rgb(21, 21, 21) ;
-    opacity: 1;
-    position: relative;
-    border-radius: 20px;
-    color: white;
+    display: flex;
     
 }
-.members1::after, .members1::before{
-    --angle:30deg;
-    content: '';
-    position: absolute;
-    inset: -3px;
-    background:conic-gradient(from var(--angle), transparent 70%, #d11149, transparent);
-    z-index: -1;
-    animation: 2s spin linear infinite;
-    border-radius: 20px;
-}
-.members2::after, .members2::before{
-    --angle:20deg;
-    content: '';
-    position: absolute;
-    inset: -3px;
-    background:conic-gradient(from var(--angle), transparent 70%, #11d111, transparent);
-    z-index: -1;
-    animation: 3s spin linear infinite;
-    border-radius: 20px;
-}
-.members3::after, .members3::before{
-    --angle:70deg;
-    content: '';
-    position: absolute;
-    inset: -3px;
-    background:conic-gradient(from var(--angle), transparent 70%, #1627dd, transparent);
-    z-index: -1;
-    animation: 1.5s spin linear infinite;
-    border-radius: 20px;
-}
-.members1::before, .members2::before,.members3::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
+section{
+    width: 500px;
+    padding-left: 10px;
     
 }
 
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+.studentNo{
+    font-size: 3rem;
+    font-family: fantasy;
+    text-indent: 0px;
 }
-@keyframes spin {
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+p,h2{
+    
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    animation-iteration-count: 1;
+}
+
+@keyframes appear {
     from{
-        --angle: 0deg;
+        color: transparent;
+        opacity: 0;
+        scale: 0.1;
     }to{
-        --angle: 360deg;
+        color: white;
+        opacity: 1;
+        scale: 1;
     }
 }
-p{
-    font-size: 20px;
+
+#img1{
+    background-image: url('jolester.jpg') ;
 }
-h1{
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    text-wrap: wrap;
+#img2{
+    background-image: url('eisen.jpg') ;
+}
+#img3{
+    background-image: url('lev.jpg') ;
+}
+#img1,#img2,#img3{
+    height: 500px;
+    width: 500px;
+    
+    background-size: cover;
+    position: relative;
+    
+    border-radius: 30px;
+
+    animation-name: moves;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    animation-iteration-count: 1;
+    
+    
+
+}
+#img1::after, #img2::after, #img3::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, transparent 40%, #121212);
+}
+@keyframes moves{
+    from{
+        opacity: 0;
+        transform: translate(-1500px);
+    }to{
+        opacity: 1;
+        transform: translate(0px);
+    }
 }
