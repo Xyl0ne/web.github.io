@@ -111,10 +111,13 @@ p,h2{
     }
 }
 @media (max-width: 600px) {
-   
- main {
+
+    main {
         margin: 50px 12px 80px;
         gap: 70px;
+    }
+    header, footer {
+        width: 100%;
     }
 
     article {
@@ -123,6 +126,12 @@ p,h2{
         gap: 40px;
     }
 
+    p{
+    
+        display: flex;
+        flex-wrap: wrap;
+        word-wrap: wrap;
+    }
     #img1, #img2, #img3 {
         height: 300px;
         width: 300px;
@@ -149,4 +158,5 @@ p,h2{
     
 }
    
+
 
