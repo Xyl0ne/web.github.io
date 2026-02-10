@@ -9,7 +9,8 @@ Jolester Vince Mejia
 Lean Ferriol
 
 
-Activities
+ACTIVITIES
 
+https://github.com/Xyl0ne/django-blog.git
 
 https://github.com/Xyl0ne/django-netblog.git
