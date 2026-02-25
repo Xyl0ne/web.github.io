@@ -8,6 +8,7 @@ Jolester Vince Mejia - C-23-11413
 
 Lean Ferriol - C-23-11412
 
+Python Django
 
 ACTIVITIES
 
@@ -22,3 +23,10 @@ https://github.com/Xyl0ne/django-blog.git
 Act3
 
 https://github.com/Xyl0ne/django-netblog.git
+
+
+React 
+
+activity
+
+https://github.com/Xyl0ne/react-frontend.git
